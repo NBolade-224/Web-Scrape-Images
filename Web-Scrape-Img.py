@@ -58,7 +58,7 @@ async def Scraper1(vurl):
 
 
 asession.run(*[lambda vurl=vurl: Scraper1(vurl) for vurl in urls1])
-#asession.run(*[lambda vurl=vurl: Scraper1(vurl) for vurl in urls2])
+asession.run(*[lambda vurl=vurl: Scraper1(vurl) for vurl in urls2])
 
 for skus in SKUwebpage:
     page = session.get(SKUwebpage.get(skus))
